@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewsOverviewTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fzG-Ni-D7w" customClass="NewsOverviewTableCell" customModule="vincent" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="419" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fzG-Ni-D7w" id="ugi-Ve-RG9">
+                <rect key="frame" x="0.0" y="0.0" width="419" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QbU-Tb-Xtq">
+                        <rect key="frame" x="22" y="26" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Xjx-6C-kDZ"/>
+                            <constraint firstAttribute="height" constant="80" id="xII-bP-dTc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-cm-Ots">
+                        <rect key="frame" x="353" y="55.5" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QbU-Tb-Xtq" firstAttribute="centerY" secondItem="ugi-Ve-RG9" secondAttribute="centerY" id="T1R-q8-hgJ"/>
+                    <constraint firstItem="QbU-Tb-Xtq" firstAttribute="leading" secondItem="ugi-Ve-RG9" secondAttribute="leadingMargin" constant="2" id="W3V-V1-M0y"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jIA-cm-Ots" secondAttribute="trailing" constant="4" id="ZHo-TQ-ntO"/>
+                    <constraint firstItem="jIA-cm-Ots" firstAttribute="centerY" secondItem="ugi-Ve-RG9" secondAttribute="centerY" id="yH4-6Q-g9l"/>
+                    <constraint firstItem="jIA-cm-Ots" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QbU-Tb-Xtq" secondAttribute="trailing" constant="55" id="yTl-7I-Zd1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="newsImage" destination="QbU-Tb-Xtq" id="mhY-Gb-3n4"/>
+                <outlet property="newsTitle" destination="jIA-cm-Ots" id="CnX-oi-3BI"/>
+            </connections>
+            <point key="canvasLocation" x="44" y="158.32083958020991"/>
+        </tableViewCell>
+    </objects>
+</document>

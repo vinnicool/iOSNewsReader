@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  vincent
+
+  Created by Vincent on 10/23/18.
+  Copyright © 2018 drok. All rights reserved.
+*/
+
+"title_login" = "Inloggen";
+"action_login" = "Inloggen";
+"action_register" = "Registreren";
+"action_continueNoLogin" = "Doorgaan";
+"explanation_continueNoLogin" = "Klik op de onderliggende knop om door te gaan zonder gebruik te maken van een account";
+"placeholder_username" = "Gebruikersnaam";
+"placeholder_password" = "Wachtwoord";
+"message_registered" = "Je bent succesvol geregistreerd, je kunt nu inloggen";
+"error_validationError" = "Invalide gebruikersnaam of wachtwoord";
+"title_newsoverview" = "Nieuws";
+"error_unknown" = "Er is iets fout gegaan, probeer het later nog eens.";
+"action_logout" = "Log uit";
+"action_liked" = "Geliked";
+"action_clearFilter" = "Geen filter";
+"filter_all" = "Alle";
