@@ -64,6 +64,10 @@ public class NewsOverviewTableViewController : UIViewController {
                     selectedFeedId = feed[index - 1].id
                 }
                 self.currentFilteredFeed = selectedFeedId
+                if self.currentlyOnLikedMode { //workaround for not being able to filter liked news
+                    self.currentlyOnLikedMode = false
+                    self.likedRightBarButtonItem?.image = UIImage(named: "like")
+                }
                 self.getNewsAsync(nextId: nil, deleteExisting: true, feed: selectedFeedId)
             }
         }
@@ -93,7 +97,14 @@ public class NewsOverviewTableViewController : UIViewController {
     
     @objc
     private func refresh() {
-        getNewsAsync(nextId: nil, deleteExisting: true, feed: self.currentFilteredFeed)
+        if currentlyOnLikedMode {
+            if let token = AppDelegate.authToken {
+                getLikedNewsAsync(token: token)
+            }
+        }
+        else {
+            getNewsAsync(nextId: nil, deleteExisting: true, feed: self.currentFilteredFeed)
+        }
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
@@ -101,7 +112,7 @@ public class NewsOverviewTableViewController : UIViewController {
     @objc
     private func logout() {
         AppDelegate.authToken = nil
-        KeychainWrapper.standard.removeObject(forKey: ViewController.authtokenKey)
+        KeychainWrapper.standard.removeObject(forKey: LoginViewController.authtokenKey)
         
         navigationController?.popViewController(animated: true)
     }

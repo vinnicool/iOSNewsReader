@@ -10,7 +10,7 @@ import UIKit
 import Toast_Swift
 import SwiftKeychainWrapper
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -29,10 +29,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setViewTexts()
         setupFormProperties()
-        if let token = KeychainWrapper.standard.string(forKey: ViewController.authtokenKey) {
-            AppDelegate.authToken = token
-            navigateToNews()
-        }
+        checkIfStillLoggedIn()
     }
     
     func setViewTexts() {
@@ -90,7 +87,7 @@ class ViewController: UIViewController {
             
             if let httptoken = httptoken {
                 AppDelegate.authToken = httptoken.authToken
-                KeychainWrapper.standard.set(httptoken.authToken, forKey: ViewController.authtokenKey)
+                KeychainWrapper.standard.set(httptoken.authToken, forKey: LoginViewController.authtokenKey)
                 self.clearForm()
                 self.navigateToNews()
             }
@@ -132,6 +129,15 @@ class ViewController: UIViewController {
     
     func continueWithoutLogin(){
         navigateToNews()
+    }
+    
+    func checkIfStillLoggedIn() {
+        if KeychainWrapper.standard.hasValue(forKey: LoginViewController.authtokenKey) {
+            if let token = KeychainWrapper.standard.string(forKey: LoginViewController.authtokenKey) {
+                AppDelegate.authToken = token
+                navigateToNews()
+            }
+        }
     }
     
     func navigateToNews(){

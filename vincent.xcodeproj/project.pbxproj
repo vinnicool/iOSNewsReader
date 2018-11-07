@@ -23,7 +23,7 @@
 		BF3E803A2188816600B20CA9 /* InternetHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3E80392188816600B20CA9 /* InternetHelper.swift */; };
 		BF47F8BB21872E8C009E5497 /* StringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47F8BA21872E8C009E5497 /* StringHelper.swift */; };
 		BF4F0611217F2FA300D1DEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F0610217F2FA300D1DEAE /* AppDelegate.swift */; };
-		BF4F0613217F2FA300D1DEAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F0612217F2FA300D1DEAE /* ViewController.swift */; };
+		BF4F0613217F2FA300D1DEAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4F0612217F2FA300D1DEAE /* LoginViewController.swift */; };
 		BF4F0616217F2FA300D1DEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F0614217F2FA300D1DEAE /* Main.storyboard */; };
 		BF4F0618217F2FA500D1DEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4F0617217F2FA500D1DEAE /* Assets.xcassets */; };
 		BF4F061B217F2FA500D1DEAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4F0619217F2FA500D1DEAE /* LaunchScreen.storyboard */; };
@@ -55,7 +55,7 @@
 		BF47F8BA21872E8C009E5497 /* StringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHelper.swift; sourceTree = "<group>"; };
 		BF4F060D217F2FA300D1DEAE /* vincent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vincent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4F0610217F2FA300D1DEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF4F0612217F2FA300D1DEAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF4F0612217F2FA300D1DEAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF4F0615217F2FA300D1DEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF4F0617217F2FA500D1DEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF4F061A217F2FA500D1DEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		BF47F8BE21872F2F009E5497 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				BF4F0612217F2FA300D1DEAE /* ViewController.swift */,
+				BF4F0612217F2FA300D1DEAE /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -293,6 +293,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-vincent/Pods-vincent-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
@@ -303,6 +304,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
@@ -333,7 +335,7 @@
 				BF0195FF217F43D600923B29 /* NewsreaderApiManager.swift in Sources */,
 				BF65B46E2185DA1700B65FE7 /* ArticleDataSetProtocol.swift in Sources */,
 				BF3CEF6C21809AAE00191CF0 /* HttpAuthToken.swift in Sources */,
-				BF4F0613217F2FA300D1DEAE /* ViewController.swift in Sources */,
+				BF4F0613217F2FA300D1DEAE /* LoginViewController.swift in Sources */,
 				BF01960A217F546D00923B29 /* CustomHttpResponse.swift in Sources */,
 				BF4F0611217F2FA300D1DEAE /* AppDelegate.swift in Sources */,
 				BF019608217F49B500923B29 /* Category.swift in Sources */,

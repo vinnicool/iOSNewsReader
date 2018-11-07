@@ -6,10 +6,10 @@ target 'vincent' do
   use_frameworks!
 
   pod 'Alamofire' #Network requests
+  pod 'AlamofireNetworkActivityIndicator' #Network spinner
   pod 'Kingfisher' #Loading images
   pod 'SwiftKeychainWrapper' #Storing credentials secured
   pod 'Toast-Swift' #Showing messages
   pod 'DropDown' #Dropdown element
   # Pods for vincent
-
 end
